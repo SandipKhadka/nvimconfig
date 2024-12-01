@@ -51,7 +51,7 @@ local M = {
         "nvim-treesitter/nvim-treesitter",
         config = function()
             require("nvim-treesitter.configs").setup {
-                ensure_installed = { "lua" },
+                ensure_installed = { "lua" ,"markdown_inline"},
                 auto_install = true,  -- Fixed typo here
             }
         end,
