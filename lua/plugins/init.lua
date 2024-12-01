@@ -52,7 +52,7 @@ local M = {
         config = function()
             require("nvim-treesitter.configs").setup {
                 ensure_installed = { "lua" },
-                auto_installd = true,
+                auto_install = true,  -- Fixed typo here
             }
         end,
     },
@@ -106,7 +106,10 @@ local M = {
     },
     {
         "lukas-reineke/indent-blankline.nvim",
-        opts = {},
+        opts = {
+            char = "|",
+            use_treesitter = true,  -- Provide custom config
+        },
         main = "ibl",
         config = function()
             require "config.indent"
@@ -140,4 +143,6 @@ local M = {
         end,
     },
 }
+
 return M
+
