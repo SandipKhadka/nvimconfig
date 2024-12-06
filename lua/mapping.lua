@@ -54,7 +54,6 @@ map("n", "<leader>fb", builtin.buffers, {})
 map("n", "<leader>fh", builtin.help_tags, {})
 map("n", "<C-p>", builtin.git_files, {})
 
-map("n", "<leader>m", ":Trouble diagnostics toggle<CR>")
 
 map("n", "<leader>fm", function()
     require("conform").format { lsp_fallback = true }

@@ -50,10 +50,7 @@ local M = {
     {
         "nvim-treesitter/nvim-treesitter",
         config = function()
-            require("nvim-treesitter.configs").setup {
-                ensure_installed = { "lua" ,"markdown_inline"},
-                auto_install = true,  -- Fixed typo here
-            }
+            require "config.tree-sitter"
         end,
     },
     {
@@ -101,18 +98,7 @@ local M = {
     {
         "folke/trouble.nvim",
         config = function()
-            require("trouble").setup {}
-        end,
-    },
-    {
-        "lukas-reineke/indent-blankline.nvim",
-        opts = {
-            char = "|",
-            use_treesitter = true,  -- Provide custom config
-        },
-        main = "ibl",
-        config = function()
-            require "config.indent"
+            require "config.trouble"
         end,
     },
     {
@@ -132,6 +118,7 @@ local M = {
                     "lua_ls",
                     "rust_analyzer",
                     "pyright",
+                    "clangd"
                 },
             }
         end,
