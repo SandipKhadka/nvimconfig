@@ -1,7 +1,6 @@
 local o = vim.o
 local g = vim.g
 local opt = vim.opt
-local uv = vim.loop
 
 o.expandtab = true
 o.shiftwidth = 4
@@ -20,18 +19,19 @@ local undodir
 if vim.loop.os_uname().sysname == "Linux" then
     undodir = os.getenv("HOME") .. "/.nvim/undodir"
 elseif vim.loop.os_uname().sysname == "Windows_NT" then
-    undodir = os.getenv("USERPROFILE") .. "\\AppData\\Local\\nvim\\undodir"
+    undodir = os.getenv("USERPROFILE") .. "\\AppData\\Local\\nvim-data\\undodir"
 else
     undodir = os.getenv("HOME") .. "/.nvim/undodir"
 end
 
-os.execute("mkdir -p " .. undodir)
 
-o.undodir = undodir
-o.undofile = true
-o.backup = false
-o.swapfile = false
+opt.undodir = undodir
+opt.undofile = true
+opt.backup = false
+opt.swapfile = false
 
+
+opt.wrap = false
 opt.shortmess:append("sI")
 
 g.loaded_node_provider = 0
