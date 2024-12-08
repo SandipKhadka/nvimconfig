@@ -23,7 +23,7 @@ local M = {
         name = "catppuccin",
         priority = 1000,
         config = function()
-            require "config.theme"
+            require('config.theme.catppuccin')
         end,
     },
     {
@@ -128,6 +128,13 @@ local M = {
         config = function()
             require "config.git-signs"
         end,
+    },
+
+    {
+         "rose-pine/neovim", name = "rose-pine" ,
+        	config = function()
+                require("config.theme.rose-pine")
+	        end,
     },
 }
 

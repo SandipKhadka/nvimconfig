@@ -13,7 +13,7 @@ require("catppuccin").setup({
         percentage = 0.15,
     },
     no_italic = false,
-    no_bold = false,
+    no_bold = true,
     no_underline = false,
     styles = {
         comments = { "italic" },
@@ -37,13 +37,11 @@ require("catppuccin").setup({
         gitsigns = true,
         nvimtree = true,
         treesitter = true,
-        notify = false,
+        notify = true,
         mini = {
             enabled = true,
             indentscope_color = "",
         },
     },
 })
-
-vim.cmd.colorscheme "catppuccin"
 

@@ -43,7 +43,7 @@ require("lspconfig").pyright.setup {
     on_init = on_init,
 }
 
-require("lspconfig").pyright.setup {
+require("lspconfig").clangd.setup {
     capabilities = capabilities,
     on_init = on_init,
 }
