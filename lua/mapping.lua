@@ -1,10 +1,10 @@
 local builtin = require "telescope.builtin"
 vim.g.mapleader = " "
 local map = vim.keymap.set
+
 map("n", "<leader>pv", vim.cmd.Ex)
 map("n", "<Esc>", "<cmd>noh<CR>")
-map("n", "<leader>/", "gcc")
-map("v", "<leader>/", "gc")
+map("n","+","<C-a>")
 
 map("i", "<C-b>", "<ESC>^i")
 map("i", "<C-e>", "<End>")
@@ -55,3 +55,4 @@ map("n", "<C-Up>", ":resize +2<CR>", { noremap = true, silent = true })
 map("n", "<C-Down>", ":resize -2<CR>", { noremap = true, silent = true })
 map("n", "<C-Left>", ":vertical resize -2<CR>", { noremap = true, silent = true })
 map("n", "<C-Right>", ":vertical resize +2<CR>", { noremap = true, silent = true })
+

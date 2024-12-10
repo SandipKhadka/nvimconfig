@@ -131,11 +131,15 @@ local M = {
     },
 
     {
-         "rose-pine/neovim", name = "rose-pine" ,
-        	config = function()
-                require("config.theme.rose-pine")
-	        end,
+        "rose-pine/neovim", name = "rose-pine" ,
+        config = function()
+            require("config.theme.rose-pine")
+        end,
     },
+    {
+        'tpope/vim-commentary'
+
+    }
 }
 
 return M
