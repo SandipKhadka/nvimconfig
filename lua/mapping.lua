@@ -4,7 +4,8 @@ local map = vim.keymap.set
 
 map("n", "<leader>pv", vim.cmd.Ex)
 map("n", "<Esc>", "<cmd>noh<CR>")
-map("n","+","<C-a>")
+map("n", "+", "<C-a>")
+map("n", "-", "<C-x>")
 
 map("i", "<C-b>", "<ESC>^i")
 map("i", "<C-e>", "<End>")
@@ -17,6 +18,7 @@ map("n", "<C-h>", "<C-w>h")
 map("n", "<C-l>", "<C-w>l")
 map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
+map("n", "<C-m>", "<C-w>x")
 
 map("n", "<Esc>", "<cmd>noh<CR>")
 
@@ -45,7 +47,6 @@ map("n", "<leader>fb", builtin.buffers, {})
 map("n", "<leader>fh", builtin.help_tags, {})
 map("n", "<C-p>", builtin.git_files, {})
 
-
 map("n", "<leader>fm", function()
     require("conform").format { lsp_fallback = true }
 end)
@@ -56,3 +57,7 @@ map("n", "<C-Down>", ":resize -2<CR>", { noremap = true, silent = true })
 map("n", "<C-Left>", ":vertical resize -2<CR>", { noremap = true, silent = true })
 map("n", "<C-Right>", ":vertical resize +2<CR>", { noremap = true, silent = true })
 
+-- map git related to git fugitive
+map("n", "<leader>gs", "<cmd>Git<CR>")
+map("n", "gl", "<cmd>diffget //3<CR>")
+map("n", "gh", "<cmd>diffget //2<CR>")

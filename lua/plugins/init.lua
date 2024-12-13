@@ -23,7 +23,7 @@ local M = {
         name = "catppuccin",
         priority = 1000,
         config = function()
-            require('config.theme.catppuccin')
+            require "config.theme.catppuccin"
         end,
     },
     {
@@ -37,6 +37,7 @@ local M = {
             "hrsh7th/cmp-cmdline",
             "hrsh7th/nvim-cmp",
             "l3mon4d3/luasnip",
+
             "saadparwaiz1/cmp_luasnip",
             "j-hui/fidget.nvim",
             "rafamadriz/friendly-snippets",
@@ -55,6 +56,7 @@ local M = {
     },
     {
         "stevearc/conform.nvim",
+        branch = "nvim-0.9",
         config = function()
             require "config.confirm"
         end,
@@ -118,7 +120,7 @@ local M = {
                     "lua_ls",
                     "rust_analyzer",
                     "pyright",
-                    "clangd"
+                    "clangd",
                 },
             }
         end,
@@ -131,16 +133,15 @@ local M = {
     },
 
     {
-        "rose-pine/neovim", name = "rose-pine" ,
+        "rose-pine/neovim",
+        name = "rose-pine",
         config = function()
-            require("config.theme.rose-pine")
+            require "config.theme.rose-pine"
         end,
     },
     {
-        'tpope/vim-commentary'
-
-    }
+        "tpope/vim-commentary",
+    },
 }
 
 return M
-
