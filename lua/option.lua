@@ -17,22 +17,20 @@ o.termguicolors = true
 
 local undodir
 if vim.loop.os_uname().sysname == "Linux" then
-    undodir = os.getenv("HOME") .. "/.nvim/undodir"
+    undodir = os.getenv "HOME" .. "/.nvim/undodir"
 elseif vim.loop.os_uname().sysname == "Windows_NT" then
-    undodir = os.getenv("USERPROFILE") .. "\\AppData\\Local\\nvim-data\\undodir"
+    undodir = os.getenv "USERPROFILE" .. "\\AppData\\Local\\nvim-data\\undodir"
 else
-    undodir = os.getenv("HOME") .. "/.nvim/undodir"
+    undodir = os.getenv "HOME" .. "/.nvim/undodir"
 end
-
 
 opt.undodir = undodir
 opt.undofile = true
 opt.backup = false
 opt.swapfile = false
 
-
 opt.wrap = false
-opt.shortmess:append("sI")
+opt.shortmess:append "sI"
 
 g.loaded_node_provider = 0
 g.loaded_python3_provider = 0
@@ -40,4 +38,3 @@ g.loaded_perl_provider = 0
 g.loaded_ruby_provider = 0
 
 opt.smartindent = true
-

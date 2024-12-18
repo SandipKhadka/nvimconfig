@@ -1,5 +1,5 @@
-require'nvim-treesitter.configs'.setup {
-    ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline"},
+require("nvim-treesitter.configs").setup {
+    ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
     sync_install = false,
     auto_install = true,
 
@@ -9,7 +9,7 @@ require'nvim-treesitter.configs'.setup {
         use_languagetree = true,
     },
     indent = {
-        disable = {"lua"},
+        disable = { "lua" },
         enable = true,
     },
 }

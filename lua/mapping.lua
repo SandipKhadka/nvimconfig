@@ -19,6 +19,7 @@ map("n", "<C-l>", "<C-w>l")
 map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 map("n", "<C-m>", "<C-w>x")
+map("n", "<C-w>", "<C-w>o")
 
 map("n", "<Esc>", "<cmd>noh<CR>")
 
