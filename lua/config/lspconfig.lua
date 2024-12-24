@@ -48,6 +48,15 @@ require("lspconfig").clangd.setup {
     on_init = on_init,
 }
 
+require("lspconfig").bashls.setup {
+    capabilities = capabilities,
+    on_init = on_init,
+
+    bashIde = {
+        globPattern = "*@(.sh|.inc|.bash|.command)",
+    },
+}
+
 require("lspconfig").lua_ls.setup {
     capabilities = capabilities,
     on_init = on_init,

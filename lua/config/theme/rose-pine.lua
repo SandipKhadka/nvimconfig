@@ -1,4 +1,4 @@
-require("rose-pine").setup({
+require("rose-pine").setup {
     variant = "auto",
     dark_variant = "main",
     dim_inactive_windows = false,
@@ -48,8 +48,5 @@ require("rose-pine").setup({
 
     highlight_groups = {},
 
-    before_highlight = function(group, highlight, palette)
-    end,
-})
-
-
+    before_highlight = function(group, highlight, palette) end,
+}

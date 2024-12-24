@@ -121,6 +121,7 @@ local M = {
                     "rust_analyzer",
                     "pyright",
                     "clangd",
+                    "bashls",
                 },
             }
         end,

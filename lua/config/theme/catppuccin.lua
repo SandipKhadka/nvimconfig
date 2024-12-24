@@ -1,4 +1,4 @@
-require("catppuccin").setup({
+require("catppuccin").setup {
     flavour = "auto",
     background = {
         light = "latte",
@@ -43,5 +43,4 @@ require("catppuccin").setup({
             indentscope_color = "",
         },
     },
-})
-
+}

@@ -7,13 +7,13 @@ o.shiftwidth = 4
 o.tabstop = 4
 o.softtabstop = 4
 o.smartindent = true
-o.numberwidth = 5
-o.ruler = false
 
+o.numberwidth = 5
 o.nu = true
 o.rnu = true
 
-o.termguicolors = true
+opt.hlsearch = true
+opt.incsearch = true
 
 local undodir
 if vim.loop.os_uname().sysname == "Linux" then
@@ -37,4 +37,5 @@ g.loaded_python3_provider = 0
 g.loaded_perl_provider = 0
 g.loaded_ruby_provider = 0
 
-opt.smartindent = true
+o.termguicolors = true
+opt.colorcolumn = "100"
