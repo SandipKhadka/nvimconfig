@@ -55,3 +55,13 @@ map("n", "-", "<C-x>")
 
 map("n", "<A-h>", ":split<CR>")
 map("n", "<A-v>", ":vsplit<CR>")
+
+map("n", "<leader>y", '"+y')
+map("v", "<leader>y", '"+y')
+map("n", "<leader>Y", '"+Y')
+map("n", "<leader>p", '"+p')
+map("n", "<leader>P", '"+P')
+
+map("n", "q", "<cmd>q<CR>")
+map("n", "Q", "<cmd>q!<CR>")
+map("i", "<A-q>", "<Esc>")

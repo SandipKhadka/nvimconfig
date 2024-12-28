@@ -14,7 +14,11 @@ autocmd("LspAttach", {
         vim.keymap.set("n", "<leader>vd", function()
             vim.diagnostic.open_float()
         end, opts)
-        vim.keymap.set({ "v", "n" }, "<leader>ca", require("actions-preview").code_actions)
+        vim.keymap.set(
+            { "v", "n" },
+            "<leader>ca",
+            require("actions-preview").code_actions
+        )
         vim.keymap.set("n", "<leader>gD", function()
             vim.lsp.buf.references()
         end, opts)
@@ -43,8 +47,10 @@ autocmd("BufWritePre", {
 autocmd("BufLeave", {
     pattern = "*",
     callback = function()
-        require("conform").format { lsp_fallback = true }
-        vim.cmd "silent! write"
+        if vim.bo.modified then
+            require("conform").format { lsp_fallback = true }
+            vim.cmd "silent! write"
+        end
     end,
 })
 
@@ -52,7 +58,9 @@ autocmd("BufLeave", {
 autocmd("FocusLost", {
     pattern = "*",
     callback = function()
-        require("conform").format { lsp_fallback = true }
-        vim.cmd "silent! write"
+        if vim.bo.modified then
+            require("conform").format { lsp_fallback = true }
+            vim.cmd "silent! write"
+        end
     end,
 })
