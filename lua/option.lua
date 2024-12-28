@@ -32,10 +32,17 @@ opt.swapfile = false
 opt.wrap = false
 opt.shortmess:append "sI"
 
+opt.mouse = ""
+
 g.loaded_node_provider = 0
 g.loaded_python3_provider = 0
 g.loaded_perl_provider = 0
 g.loaded_ruby_provider = 0
 
+o.updatetime = 50
 o.termguicolors = true
-opt.colorcolumn = "100"
+opt.colorcolumn = "80"
+
+opt.cursorline = true
+
+opt.fillchars = { eob = " " }

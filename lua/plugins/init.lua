@@ -1,4 +1,57 @@
 local M = {
+
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        priority = 1000,
+        config = function()
+            require "config.theme.catppuccin"
+        end,
+    },
+
+    {
+        "rose-pine/neovim",
+        name = "rose-pine",
+        config = function()
+            require "config.theme.rose-pine"
+        end,
+    },
+
+    {
+        "akinsho/bufferline.nvim",
+        version = "*",
+        dependencies = "nvim-tree/nvim-web-devicons",
+        config = function()
+            require("bufferline").setup {}
+        end,
+    },
+
+    {
+        "folke/noice.nvim",
+        event = "VeryLazy",
+        dependencies = {
+            "MunifTanjim/nui.nvim",
+            "rcarriga/nvim-notify",
+        },
+        config = function()
+            require "config.noice"
+        end,
+    },
+
+    {
+        "windwp/nvim-autopairs",
+        event = "InsertEnter",
+        config = true,
+    },
+
+    {
+        "stevearc/dressing.nvim",
+        opts = {},
+        config = function()
+            require("dressing").setup {}
+        end,
+    },
+
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
@@ -11,6 +64,7 @@ local M = {
             require "config.tree"
         end,
     },
+
     {
         "nvim-telescope/telescope.nvim",
         tag = "0.1.8",
@@ -18,14 +72,7 @@ local M = {
             require "config.telescope"
         end,
     },
-    {
-        "catppuccin/nvim",
-        name = "catppuccin",
-        priority = 1000,
-        config = function()
-            require "config.theme.catppuccin"
-        end,
-    },
+
     {
         "neovim/nvim-lspconfig",
         dependencies = {
@@ -37,7 +84,6 @@ local M = {
             "hrsh7th/cmp-cmdline",
             "hrsh7th/nvim-cmp",
             "l3mon4d3/luasnip",
-
             "saadparwaiz1/cmp_luasnip",
             "j-hui/fidget.nvim",
             "rafamadriz/friendly-snippets",
@@ -48,12 +94,7 @@ local M = {
             require "config.sniplet"
         end,
     },
-    {
-        "nvim-treesitter/nvim-treesitter",
-        config = function()
-            require "config.tree-sitter"
-        end,
-    },
+
     {
         "stevearc/conform.nvim",
         branch = "nvim-0.9",
@@ -61,55 +102,44 @@ local M = {
             require "config.confirm"
         end,
     },
+
     {
-        "folke/noice.nvim",
-        event = "VeryLazy",
-        dependencies = {
-            "MunifTanjim/nui.nvim",
-            "rcarriga/nvim-notify",
-        },
+        "nvim-treesitter/nvim-treesitter",
         config = function()
-            require "config.noice"
+            require "config.tree-sitter"
         end,
     },
+
     {
         "tpope/vim-fugitive",
     },
+
+    {
+        "lewis6991/gitsigns.nvim",
+        config = function()
+            require "config.git-signs"
+        end,
+    },
+
     {
         "mbbill/undotree",
         config = function()
             vim.keymap.set("n", "<leader>u", ":UndotreeToggle<CR>")
         end,
     },
+
     {
         "aznhe21/actions-preview.nvim",
     },
+
     {
-        "akinsho/bufferline.nvim",
-        version = "*",
-        dependencies = "nvim-tree/nvim-web-devicons",
-        config = function()
-            require("bufferline").setup {}
-        end,
+        "tpope/vim-commentary",
     },
+
     {
-        "windwp/nvim-autopairs",
-        event = "InsertEnter",
-        config = true,
+        "Exafunction/codeium.vim",
     },
-    {
-        "folke/trouble.nvim",
-        config = function()
-            require "config.trouble"
-        end,
-    },
-    {
-        "stevearc/dressing.nvim",
-        opts = {},
-        config = function()
-            require("dressing").setup {}
-        end,
-    },
+
     {
         "WhoIsSethDaniel/mason-tool-installer.nvim",
         config = function()
@@ -126,22 +156,12 @@ local M = {
             }
         end,
     },
-    {
-        "lewis6991/gitsigns.nvim",
-        config = function()
-            require "config.git-signs"
-        end,
-    },
 
     {
-        "rose-pine/neovim",
-        name = "rose-pine",
+        "folke/trouble.nvim",
         config = function()
-            require "config.theme.rose-pine"
+            require "config.trouble"
         end,
-    },
-    {
-        "tpope/vim-commentary",
     },
 }
 

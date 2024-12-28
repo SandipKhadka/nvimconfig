@@ -38,3 +38,21 @@ autocmd("BufWritePre", {
         require("conform").format { bufnr = args.buf }
     end,
 })
+
+-- auto save when buffer is changed
+autocmd("BufLeave", {
+    pattern = "*",
+    callback = function()
+        require("conform").format { lsp_fallback = true }
+        vim.cmd "silent! write"
+    end,
+})
+
+-- auto save when focus is lost
+autocmd("FocusLost", {
+    pattern = "*",
+    callback = function()
+        require("conform").format { lsp_fallback = true }
+        vim.cmd "silent! write"
+    end,
+})
