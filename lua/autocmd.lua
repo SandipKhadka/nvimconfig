@@ -64,13 +64,3 @@ autocmd("FocusLost", {
         end
     end,
 })
-
-autocmd("cursorHold", {
-    pattern = "*",
-    callback = function()
-        if vim.bo.modified then
-            require("conform").format { lsp_fallback = true }
-            vim.cmd "silent! write"
-        end
-    end,
-})

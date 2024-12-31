@@ -17,20 +17,10 @@ map("n", "<C-k>", "<C-w>k")
 map("n", "<C-m>", "<C-w>x")
 map("n", "<C-w>", "<C-w>o")
 
-map("n", "<C-Up>", ":resize +2<CR>", { noremap = true, silent = true })
-map("n", "<C-Down>", ":resize -2<CR>", { noremap = true, silent = true })
-map(
-    "n",
-    "<C-Left>",
-    ":vertical resize -2<CR>",
-    { noremap = true, silent = true }
-)
-map(
-    "n",
-    "<C-Right>",
-    ":vertical resize +2<CR>",
-    { noremap = true, silent = true }
-)
+map("n", "<C-Up>", ":resize +2<CR>")
+map("n", "<C-Down>", ":resize -2<CR>")
+map("n", "<C-Left>", ":vertical resize -2<CR>")
+map("n", "<C-Right>", ":vertical resize +2<CR>")
 
 map("n", "<tab>", ":BufferLineCycleNext<CR>", { silent = true })
 map("n", "<S-tab>", ":BufferLineCyclePrev<CR>", { silent = true })
@@ -54,6 +44,10 @@ map("i", "<C-h>", "<Left>")
 map("i", "<C-l>", "<Right>")
 map("i", "<C-j>", "<Down>")
 map("i", "<C-k>", "<Up>")
+
+map("n", "J", "mzJ`z")
+map("v", "J", ":move '>+1<CR>gv=gv")
+map("v", "K", ":move '<-2<CR>gv=gv")
 
 map("n", "<leader>n", "<cmd>set nu!<CR>")
 map("n", "<leader>rl", "<cmd>set rnu!<CR>")
