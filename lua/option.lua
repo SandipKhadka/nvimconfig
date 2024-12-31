@@ -46,3 +46,4 @@ opt.colorcolumn = "80"
 opt.cursorline = true
 
 opt.fillchars = { eob = " " }
+opt.updatetime = 50

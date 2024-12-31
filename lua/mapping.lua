@@ -19,8 +19,18 @@ map("n", "<C-w>", "<C-w>o")
 
 map("n", "<C-Up>", ":resize +2<CR>", { noremap = true, silent = true })
 map("n", "<C-Down>", ":resize -2<CR>", { noremap = true, silent = true })
-map("n", "<C-Left>", ":vertical resize -2<CR>", { noremap = true, silent = true })
-map("n", "<C-Right>", ":vertical resize +2<CR>", { noremap = true, silent = true })
+map(
+    "n",
+    "<C-Left>",
+    ":vertical resize -2<CR>",
+    { noremap = true, silent = true }
+)
+map(
+    "n",
+    "<C-Right>",
+    ":vertical resize +2<CR>",
+    { noremap = true, silent = true }
+)
 
 map("n", "<tab>", ":BufferLineCycleNext<CR>", { silent = true })
 map("n", "<S-tab>", ":BufferLineCyclePrev<CR>", { silent = true })
@@ -65,3 +75,4 @@ map("n", "<leader>P", '"+P')
 map("n", "q", "<cmd>q<CR>")
 map("n", "Q", "<cmd>q!<CR>")
 map("i", "<A-q>", "<Esc>")
+map("n", "<C-a>", "ggVG")
