@@ -33,8 +33,6 @@ opt.swapfile = false
 opt.wrap = false
 opt.shortmess:append "sI"
 
-opt.mouse = ""
-
 g.loaded_node_provider = 0
 g.loaded_python3_provider = 0
 g.loaded_perl_provider = 0
