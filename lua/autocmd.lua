@@ -14,11 +14,9 @@ autocmd("LspAttach", {
         vim.keymap.set("n", "<leader>vd", function()
             vim.diagnostic.open_float()
         end, opts)
-        vim.keymap.set(
-            { "v", "n" },
-            "<leader>ca",
-            require("actions-preview").code_actions
-        )
+        vim.keymap.set({ "v", "n" }, "<leader>ca", function()
+            vim.lsp.buf.code_action()
+        end, opts)
         vim.keymap.set("n", "<leader>gD", function()
             vim.lsp.buf.references()
         end, opts)
@@ -44,18 +42,7 @@ autocmd("BufWritePre", {
 })
 
 -- auto save when buffer is changed
-autocmd("BufLeave", {
-    pattern = "*",
-    callback = function()
-        if vim.bo.modified then
-            require("conform").format { lsp_fallback = true }
-            vim.cmd "silent! write"
-        end
-    end,
-})
-
--- auto save when focus is lost
-autocmd("FocusLost", {
+autocmd({ "BufLeave", "FocusLost" }, {
     pattern = "*",
     callback = function()
         if vim.bo.modified then

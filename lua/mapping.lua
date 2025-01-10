@@ -69,3 +69,6 @@ map("n", "<leader>P", '"+P')
 map("n", "Q", "<cmd>q!<CR>")
 map("i", "<A-q>", "<Esc>")
 map("n", "<C-a>", "ggVG")
+
+map("n", "<leader>o", "<CMD>normal o<CR>")
+map("n", "<leader>O", "<CMD>normal O<CR>")

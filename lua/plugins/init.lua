@@ -27,18 +27,6 @@ local M = {
     },
 
     {
-        "folke/noice.nvim",
-        event = "VeryLazy",
-        dependencies = {
-            "MunifTanjim/nui.nvim",
-            "rcarriga/nvim-notify",
-        },
-        config = function()
-            require "config.noice"
-        end,
-    },
-
-    {
         "windwp/nvim-autopairs",
         event = "InsertEnter",
         config = true,
@@ -129,10 +117,6 @@ local M = {
     },
 
     {
-        "aznhe21/actions-preview.nvim",
-    },
-
-    {
         "tpope/vim-commentary",
     },
 
@@ -151,6 +135,7 @@ local M = {
                     "rust_analyzer",
                     "pyright",
                     "clangd",
+                    "prettier",
                     "bashls",
                 },
             }
