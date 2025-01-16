@@ -137,6 +137,7 @@ local M = {
                     "clangd",
                     "prettier",
                     "bashls",
+                    "ts_ls",
                 },
             }
         end,

@@ -38,6 +38,11 @@ require("lspconfig").jdtls.setup {
     on_init = on_init,
 }
 
+require("lspconfig").ts_ls.setup {
+    capabilities = capabilities,
+    on_init = on_init,
+}
+
 require("lspconfig").pyright.setup {
     capabilities = capabilities,
     on_init = on_init,
