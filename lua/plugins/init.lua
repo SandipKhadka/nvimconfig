@@ -137,6 +137,8 @@ local M = {
                     "clangd",
                     "prettier",
                     "bashls",
+                    "html",
+                    "cssls",
                     "ts_ls",
                 },
             }
@@ -147,6 +149,13 @@ local M = {
         "folke/trouble.nvim",
         config = function()
             require "config.trouble"
+        end,
+    },
+
+    {
+        "windwp/nvim-ts-autotag",
+        config = function()
+            require "config.tag"
         end,
     },
 }

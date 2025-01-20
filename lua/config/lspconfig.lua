@@ -38,9 +38,21 @@ require("lspconfig").jdtls.setup {
     on_init = on_init,
 }
 
+require("lspconfig").html.setup {
+    capabilities = capabilities,
+    on_init = on_init,
+}
+
+require("lspconfig").cssls.setup {
+    capabilities = capabilities,
+    on_init = on_init,
+    filetypes = { "html", "javascript", "css" },
+}
+
 require("lspconfig").ts_ls.setup {
     capabilities = capabilities,
     on_init = on_init,
+    filetypes = { "javascript", "typescript", "html" },
 }
 
 require("lspconfig").pyright.setup {
