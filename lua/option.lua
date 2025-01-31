@@ -12,7 +12,7 @@ o.numberwidth = 5
 o.nu = true
 o.rnu = true
 
-opt.hlsearch = true
+opt.hlsearch = false
 opt.incsearch = true
 opt.showmatch = true
 

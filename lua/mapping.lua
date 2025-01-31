@@ -16,6 +16,7 @@ map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 map("n", "<C-m>", "<C-w>x")
 map("n", "<C-w>", "<cmd>bd<CR>")
+map("n", "<C-o>", "<C-w>o>")
 
 map("n", "<C-Up>", ":resize +2<CR>", { silent = true })
 map("n", "<C-Down>", ":resize -2<CR>", { silent = true })
@@ -64,10 +65,12 @@ map("n", "<leader>y", '"+y')
 map("v", "<leader>y", '"+y')
 map("n", "<leader>Y", '"+Y')
 map("n", "<leader>p", '"+p')
+
 map("n", "<leader>P", '"+P')
 
 map("n", "Q", "<cmd>q!<CR>")
 map("i", "<A-q>", "<Esc>")
 map("n", "<C-a>", "ggVG")
 
-map("n", "<leader>o", "")
+map("n", "<leader>o", "<CMD>normal o<CR>")
+map("n", "<leader>O", "<CMD>normal O<CR>")
