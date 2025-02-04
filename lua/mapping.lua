@@ -23,8 +23,8 @@ map("n", "<C-Down>", ":resize -2<CR>", { silent = true })
 map("n", "<C-Left>", ":vertical resize -2<CR>", { silent = true })
 map("n", "<C-Right>", ":vertical resize +2<CR>", { silent = true })
 
-map("n", "<tab>", ":BufferLineCycleNext<CR>", { silent = true })
-map("n", "<S-tab>", ":BufferLineCyclePrev<CR>", { silent = true })
+map("n", "<tab>", "<CMD>bn<CR>", { silent = true })
+map("n", "<S-tab>", "<CMD>bp<CR>", { silent = true })
 
 map("n", "<leader>gs", "<cmd>Git<CR>")
 map("n", "gl", "<cmd>diffget //3<CR>")
@@ -35,6 +35,7 @@ map("n", "<leader>fm", function()
 end)
 
 map("n", "<C-d>", "<C-d>zz")
+
 map("n", "<C-u>", "<C-u>zz")
 map("n", "n", "nzz")
 map("n", "N", "Nzz")

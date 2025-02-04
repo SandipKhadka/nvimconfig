@@ -18,15 +18,6 @@ local M = {
     },
 
     {
-        "akinsho/bufferline.nvim",
-        version = "*",
-        dependencies = "nvim-tree/nvim-web-devicons",
-        config = function()
-            require("bufferline").setup {}
-        end,
-    },
-
-    {
         "windwp/nvim-autopairs",
         event = "InsertEnter",
         config = true,
@@ -45,7 +36,6 @@ local M = {
         branch = "v3.x",
         dependencies = {
             "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons",
             "muniftanjim/nui.nvim",
         },
         config = function()
@@ -85,7 +75,6 @@ local M = {
 
     {
         "stevearc/conform.nvim",
-        branch = "nvim-0.9",
         config = function()
             require "config.confirm"
         end,
